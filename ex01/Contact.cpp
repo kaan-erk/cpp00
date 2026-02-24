@@ -1,5 +1,30 @@
 #include "Contact.hpp"
 
+std::string Contact::_truncateString(std::string str) const
+{
+    if (str.length() > 10)
+        return (str.substr(0, 9) + "."); 
+    return str;
+}
+
+void Contact::viewContactRow(int index) const
+{
+    std::cout << "|" << std::setw(10) << std::right << index << "|"
+              << std::setw(10) << std::right << _truncateString(_firstName) << "|"
+              << std::setw(10) << std::right << _truncateString(_lastName) << "|"
+              << std::setw(10) << std::right << _truncateString(_nickName) << "|"
+              << std::endl;
+}
+
+void Contact::viewContactDetails(void) const
+{
+    std::cout << "First Name     : " << _firstName << std::endl;
+    std::cout << "Last Name      : " << _lastName << std::endl;
+    std::cout << "Nickname       : " << _nickName << std::endl;
+    std::cout << "Phone Number   : " << _phoneNumber << std::endl;
+    std::cout << "Darkest Secret : " << _darkestSecrets << std::endl;
+}
+
 void	Contact::add_first_name(void)
 {
 	std::string str;

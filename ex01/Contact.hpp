@@ -3,6 +3,8 @@
 
 # include <iostream>
 # include <string>
+# include <iomanip>
+# include <cstdlib>
 
 class Contact {
 	public:
@@ -13,7 +15,8 @@ class Contact {
     void	add_nickname(void);
     void	add_phone_number(void);
     void	add_darkest_secret(void);
-
+	void    viewContactRow(int index) const;
+    void    viewContactDetails(void) const;
 	private:
 	
 	std::string _firstName; 
@@ -21,6 +24,7 @@ class Contact {
 	std::string _nickName; 
 	std::string _phoneNumber; 
 	std::string _darkestSecrets;
+	std::string _truncateString(std::string str) const;
 };
 
 #endif
