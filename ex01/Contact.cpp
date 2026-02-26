@@ -38,6 +38,20 @@ void	Contact::add_first_name(void)
 			std::cout <<"\n EOF detected. Exiting program..." << std::endl;
 			exit(1);
 		}
+		bool isSpace = true;
+		for (size_t i = 0; i < str.length(); i++)
+		{
+			if (!std::isspace(str[i]))
+			{
+				isSpace = false;
+				break;
+			}
+		}
+		if (isSpace)
+		{
+			std::cout << "Invalid input: Can not be space!\n";
+			str = "";
+		}
 	}
 	_firstName = str;
 }
@@ -54,6 +68,20 @@ void	Contact::add_last_name(void)
 		{
 			std::cout <<"\n EOF detected. Exiting program..." << std::endl;
 			exit(1);
+		}
+		bool isSpace = true;
+		for (size_t i = 0; i < str.length(); i++)
+		{
+			if (!std::isspace(str[i]))
+			{
+				isSpace = false;
+				break;
+			}
+		}
+		if (isSpace)
+		{
+			std::cout << "Invalid input: Can not be space!\n";
+			str = "";
 		}
 	}
 	_lastName = str;
@@ -72,6 +100,20 @@ void	Contact::add_nickname(void)
 			std::cout <<"\n EOF detected. Exiting program..." << std::endl;
 			exit(1);
 		}
+		bool isSpace = true;
+		for (size_t i = 0; i < str.length(); i++)
+		{
+			if (!std::isspace(str[i]))
+			{
+				isSpace = false;
+				break;
+			}
+		}
+		if (isSpace)
+		{
+			std::cout << "Invalid input: Can not be space!\n";
+			str = "";
+		}
 	}
 	_nickName = str;
 }
@@ -89,6 +131,20 @@ void	Contact::add_phone_number(void)
 			std::cout <<"\n EOF detected. Exiting program..." << std::endl;
 			exit(1);
 		}
+		bool isInt = true;
+		for (size_t i = 0; i < str.length(); i++)
+		{
+			if (!std::isdigit(str[i]))
+			{
+				isInt = false;
+				break;
+			}
+		}
+		if (!isInt)
+		{
+			std::cout << "Invalid input: Phone number must be digit!\n";
+			str = "";
+		}
 	}
 	_phoneNumber = str;
 }
@@ -105,6 +161,20 @@ void	Contact::add_darkest_secret(void)
 		{
 			std::cout <<"\n EOF detected. Exiting program..." << std::endl;
 			exit(1);
+		}
+		bool isSpace = true;
+		for (size_t i = 0; i < str.length(); i++)
+		{
+			if (!std::isspace(str[i]))
+			{
+				isSpace = false;
+				break;
+			}
+		}
+		if (isSpace)
+		{
+			std::cout << "Invalid input: Can not be space!\n";
+			str = "";
 		}
 	}
 	_darkestSecrets = str;

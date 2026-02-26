@@ -1,11 +1,9 @@
 #include "Contact.hpp"
-#include <string>
-#include <iostream>
 #include "PhoneBook.hpp"
 
 int main()
 {
-	PhoneBook myPhoneBook; // Orkestra şefimizi (beyni) yarattık
+	PhoneBook myPhoneBook;
     std::string command;
 
     std::cout << "========================================" << std::endl;
@@ -13,7 +11,7 @@ int main()
     std::cout << "========================================" << std::endl;
     std::cout << "Commands: ADD, SEARCH, EXIT" << std::endl;
 
-    while (true)
+    while (1)
     {
         std::cout << "\n> ";
 
@@ -41,5 +39,5 @@ int main()
         }
     }
 
-    return 0;
+    return (0);
 }
