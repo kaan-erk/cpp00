@@ -5,14 +5,14 @@ SRCS = main.cpp \
 		PhoneBook.cpp
 OBJS = $(SRCS:.cpp=.o)
 
-CC = c++
+CXX = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
 $(NAME):$(OBJS)
-		$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 		$(RM) $(OBJS)
